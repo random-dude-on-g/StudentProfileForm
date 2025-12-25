@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Personal Profile</title>
+        <style>
+            body { font-family: Arial; padding:40px; 
+                   background-image: url("https://static.zerochan.net/Hatsune.Miku.full.977044.jpg");
+                   background-repeat: repeat; background-size: 75px 75px }
+            .container { max-width:700px; background-color: #15EFBFBF; margin:auto; padding:25px;
+                         border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.1); }
+            label { font-weight:bold; margin-top:12px; display:block; }
+            input, textarea { width:100%; padding:8px; margin-top:6px; }
+            button { margin-top:18px; padding:10px 20px; background:#15EFBF;
+                     color:black; border: 1; border-radius:5px; cursor:pointer; }
+            a { background-color: white; color:#15EFBF; text-decoration: none; 
+                border-radius: 10px; padding: 15px; }
+            a:hover { background-color: #15EFBF; color: black; box-shadow: 0 0 15px rgba(0,0,0,1); }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <a href="viewProfiles.jsp">View All Profiles</a>
+        </div>
+        
+            <div class="container">
+                <h1>Enter New Profile</h1>
+
+                <form method="post" action="ProfileServlet">
+                    <label>Name:</label>
+                    <input type="text" name="name" required>
+
+                    <label>Student ID:</label>
+                    <input type="text" name="studentId" required>
+
+                    <label>Program:</label>
+                    <input type="text" name="program" required>
+
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+
+                    <label>Hobbies:</label>
+                    <input type="text" name="hobbies">
+
+                    <label>Self Introduction:</label>
+                    <textarea name="intro" rows="4"></textarea>
+
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </form>
+            </div>
+            
+    </body>
+</html>
